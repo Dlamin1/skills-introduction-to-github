@@ -22,7 +22,7 @@ This portfolio is being developed as a record of **real work, technical growth a
 
 | Area | Technologies / Concepts |
 |---|---|
-| Programming | Java, Python, C / embedded programming |
+| Programming | Python, Java, C / embedded programming |
 | Computer Science | Data Structures, Algorithms, OOP, Complexity Analysis |
 | Electronics | Circuit analysis, Ohm's Law, impedance, frequency response, embedded systems |
 | Embedded Systems | PIC microcontrollers, MPLAB, microcontroller programming |
@@ -34,93 +34,76 @@ This portfolio is being developed as a record of **real work, technical growth a
 
 ## Portfolio Projects
 
-The projects below are intended to become **complete, runnable and explainable technical projects** rather than simple code exercises. Each completed project will contain its own README, source code, testing and technical documentation where appropriate.
+### 01 — Cyber Tic-Tac-Toe
 
-### 01 — Data Structures & Algorithms Toolkit
+**Level:** First-year / introductory programming  
+**Stack:** Python
 
-**Planned stack:** Java
+A command-line strategy game developed to demonstrate foundational Python programming. The player competes against a Cyber AI across three difficulty levels.
 
-A structured implementation of fundamental data structures and algorithms, including linked lists, stacks, queues, searching and sorting. The project will also document time and space complexity and include test cases.
-
-**Demonstrates:**
-- Object-oriented programming
-- Data structures
-- Algorithms
-- Complexity analysis
-- Unit testing
-- Clean code and documentation
-
-**Status:** In development
-
----
-
-### 02 — Defensive Cybersecurity Toolkit
-
-**Planned stack:** Python
-
-A collection of small defensive-security utilities focused on concepts such as password-strength analysis, hashing, input validation and security-oriented log analysis.
-
-**Demonstrates:**
-- Python programming
-- Secure programming principles
+**Features:**
+- Human vs computer gameplay
+- Easy, Medium and Hard AI
+- Minimax algorithm on Hard difficulty
 - Input validation
-- Hashing concepts
-- Defensive cybersecurity thinking
-- Testing and documentation
+- Score tracking
+- Replay support
+- Automated tests with pytest
+
+**Location:** `projects/cyber-tic-tac-toe/`  
+**Status:** ✅ Implemented
+
+### 02 — Data Structures & Algorithms Toolkit
+
+**Level:** Intermediate / second-year progression  
+**Stack:** Java
+
+A structured implementation of fundamental data structures and algorithms, including linked lists, stacks, queues, searching and sorting. The project will document time and space complexity and include test cases.
 
 **Status:** In development
 
----
+### 03 — Defensive Cybersecurity Toolkit
 
-### 03 — Electronics Engineering Calculator
+**Level:** Intermediate progression  
+**Stack:** Python
 
-**Planned stack:** Python / MATLAB
-
-An engineering calculation application covering fundamental relationships such as voltage, current, resistance, power, impedance and selected AC-circuit calculations.
-
-The project will include validation, formulas, worked examples and automated tests so that the calculations can be independently verified.
-
-**Demonstrates:**
-- Programming applied to engineering
-- Circuit analysis
-- Mathematical modelling
-- Input validation
-- Engineering documentation
+A collection of defensive-security utilities focused on password-strength analysis, hashing, input validation and security-oriented log analysis.
 
 **Status:** In development
 
----
+### 04 — Electronics Engineering Calculator
 
-### 04 — Embedded Systems / PIC Microcontroller Project
+**Level:** Intermediate progression  
+**Stack:** Python / MATLAB
 
-**Planned stack:** PIC16F84A / MPLAB / embedded C or assembly, depending on project requirements
+An engineering calculation application covering voltage, current, resistance, power, impedance and selected AC-circuit calculations, with validation and automated tests.
+
+**Status:** In development
+
+### 05 — Embedded Systems / PIC Microcontroller Project
+
+**Level:** Advanced / final-year progression  
+**Stack:** PIC16F84A / MPLAB / embedded C or assembly
 
 An embedded-systems project demonstrating microcontroller architecture, I/O control, timing and hardware/software interaction.
 
-**Demonstrates:**
-- Microcontroller programming
-- Embedded systems
-- Digital electronics
-- Hardware/software integration
-- Debugging
-
 **Status:** Planned / to be documented from verified implementation
 
----
+### 06 — CampusShield: Defensive Network Monitoring Platform
 
-### 05 — Academic Performance & Analytics System
+**Level:** Final-year capstone direction  
+**Stack:** Python / networking / data analysis
 
-**Planned stack:** Java or Python
+A defensive security platform designed to analyse authorised network-security logs, identify suspicious patterns, generate alerts and produce structured reports.
 
-A small application for managing student modules, marks and academic-performance statistics. The system will demonstrate data modelling, validation, calculations and meaningful reporting.
+**Status:** Planned capstone
 
-**Demonstrates:**
-- Application development
-- Data structures
-- File/data handling
-- Validation
-- Basic analytics
-- Software design
+### 07 — Academic Performance & Analytics System
+
+**Level:** Advanced progression  
+**Stack:** Python or Java / SQL
+
+An application for managing modules, marks and academic-performance statistics, demonstrating data modelling, validation, persistence and analytics.
 
 **Status:** Planned
 
@@ -145,7 +128,7 @@ Relevant areas include:
 
 ## Professional Development Goals
 
-I am currently building toward opportunities in:
+I am building toward opportunities in:
 
 - **Software Engineering**
 - **Graduate Developer Programmes**
@@ -170,13 +153,6 @@ Projects in this portfolio will follow a professional workflow where practical:
 - Issue tracking for planned improvements
 - Version control through Git
 - No fabricated results or unverified claims
-
----
-
-## Portfolio Status
-
-**Portfolio:** 🟡 Actively being developed  
-**Primary objective:** Build a credible final-year technical portfolio for internships, graduate programmes and entry-level technical roles.
 
 > **Principle:** Build it. Test it. Document it. Be able to explain it.
 
