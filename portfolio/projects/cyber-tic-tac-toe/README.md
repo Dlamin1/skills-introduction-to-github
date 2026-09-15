@@ -1,37 +1,46 @@
 # Cyber Tic-Tac-Toe
 
-A beginner-friendly Python game developed as a first-year Computer Science portfolio project.
+A polished Python Tic-Tac-Toe game developed as a first-year Computer Science portfolio project. It now includes both a command-line interface and a desktop **Tkinter graphical interface** while sharing the same tested game engine.
 
 ## Overview
 
-Cyber Tic-Tac-Toe is a command-line Tic-Tac-Toe game where the player competes against a computer opponent. The project adds a simple cybersecurity theme while keeping the implementation appropriate for introductory programming.
-
-## Learning Objectives
-
-This project demonstrates:
-
-- Variables and data types
-- Conditional statements
-- Loops
-- Functions
-- Lists
-- Input validation
-- Randomisation
-- Basic game-state management
-- Modular Python code
-- Automated testing
+Cyber Tic-Tac-Toe is a cybersecurity-themed strategy game where the player competes against a computer opponent. The project intentionally demonstrates first-year programming fundamentals while introducing a clean separation between **game logic** and **user interface**.
 
 ## Features
 
-- Human vs computer gameplay
-- Three difficulty levels: Easy, Medium and Hard
-- Random computer moves on Easy
-- Basic defensive/offensive strategy on Medium
-- Minimax-based optimal play on Hard
-- Score tracking during a session
-- Replay support
-- Input validation
-- Cybersecurity-themed interface
+- 🖥️ Polished Tkinter desktop interface
+- 🎮 Human vs computer gameplay
+- 🤖 Three AI difficulty levels
+  - Easy — random legal moves
+  - Medium — attacks, blocks and prioritises useful positions
+  - Hard — minimax-based optimal play
+- 🏆 Session score tracking
+- 🔄 New-round support
+- 🛡️ Cybersecurity-themed status messages
+- 🎨 Responsive hover and winner highlighting
+- ❌ Input/move validation
+- 🧪 Automated tests with pytest
+- 🧩 Shared game engine used by both CLI and GUI
+
+## Architecture
+
+The project separates presentation from game logic:
+
+```text
+                 ┌─────────────────────┐
+                 │   Game Engine       │
+                 │  cyber_tic_tac_toe  │
+                 └──────────┬──────────┘
+                            │
+              ┌─────────────┴─────────────┐
+              │                           │
+      ┌───────▼────────┐        ┌────────▼─────────┐
+      │ Command Line   │        │ Tkinter Desktop  │
+      │ Interface      │        │ Interface        │
+      └────────────────┘        └──────────────────┘
+```
+
+The GUI does **not** duplicate the AI or board rules. It imports the existing engine, making the project easier to test and maintain.
 
 ## Project Structure
 
@@ -39,21 +48,32 @@ This project demonstrates:
 cyber-tic-tac-toe/
 ├── README.md
 ├── requirements.txt
+├── .gitignore
 ├── src/
-│   └── cyber_tic_tac_toe.py
+│   ├── cyber_tic_tac_toe.py
+│   └── cyber_tic_tac_toe_gui.py
 └── tests/
-    └── test_game.py
+    ├── test_game.py
+    └── test_gui_helpers.py
 ```
 
 ## Requirements
 
 - Python 3.10+
-- No external packages are required to play the game.
-- `pytest` is required only for the automated tests.
+- Tkinter — normally included with standard Python installations
+- `pytest` — required for automated tests
 
-## Run the Game
+No third-party package is required to run the actual game.
 
-From this project directory:
+## Run the Graphical Version
+
+From the project directory:
+
+```bash
+python src/cyber_tic_tac_toe_gui.py
+```
+
+## Run the Command-Line Version
 
 ```bash
 python src/cyber_tic_tac_toe.py
@@ -73,12 +93,34 @@ Then run:
 pytest
 ```
 
-## Game Controls
+The tests cover board creation, legal moves, winners, draws, AI decisions and safe GUI-module importing.
 
-- Choose a difficulty level from 1–3.
-- Enter a board position from 1–9.
-- Position 1 is the top-left square and position 9 is the bottom-right square.
-- Complete three symbols in a row, column or diagonal to win.
+## AI Difficulty
+
+| Level | Behaviour |
+|---|---|
+| Easy | Selects a random legal move |
+| Medium | Attempts to win, blocks the player, then chooses strategic positions |
+| Hard | Uses minimax to select an optimal move |
+
+## Learning Objectives
+
+This project demonstrates:
+
+- Variables and data types
+- Conditional statements
+- Loops
+- Functions
+- Lists
+- Input validation
+- Randomisation
+- Game-state management
+- Modular Python code
+- Basic algorithmic reasoning
+- Minimax decision-making
+- GUI programming with Tkinter
+- Automated testing
+- Separation of concerns
 
 ## Academic Context
 
@@ -86,7 +128,7 @@ pytest
 **Institution:** North-West University  
 **Portfolio level:** First-year / introductory programming project
 
-This project is intentionally scoped to demonstrate foundational programming concepts rather than advanced software engineering.
+The project remains intentionally appropriate for an introductory portfolio, while the GUI upgrade demonstrates progression from console programming into event-driven desktop application development.
 
 ## Author
 
